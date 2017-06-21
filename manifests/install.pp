@@ -11,10 +11,10 @@ class iis_rewrite::install {
 
   validate_string($iis_rewrite::package_source_location)
 
-  if $::architecture = 'x64' {
+  if $::architecture == 'x64' {
     $installerpath = "${iis_rewrite::download_destination}\\rewrite_amd64.msi"
   }
-  elsif $::architecture = 'x86' {
+  elsif $::architecture == 'x86' {
     $installerpath = "${iis_rewrite::download_destination}\\rewrite_x86.msi"
   }
 
