@@ -14,8 +14,8 @@ class iis_rewrite::install {
   if $::architecture == 'x64' {
     $installerpath = "${iis_rewrite::download_destination}\\rewrite_amd64.msi"
   }
-  elsif $::architecture == 'x86' {
-    $installerpath = "${iis_rewrite::download_destination}\\rewrite_x86.msi"
+  else  {
+    $installerpath = "${iis_rewrite::download_destination}\\rewrite_${::architecture}.msi"
   }
 
   # $installerpath = "${iis_rewrite::download_destination}\\rewrite_2.0_rtw_${::architecture}.msi"
