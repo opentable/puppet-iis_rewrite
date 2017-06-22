@@ -10,8 +10,8 @@
 class iis_rewrite::params {
 
   $package_source_location = $::architecture ? {
-    'x86'   => 'http://go.microsoft.com/fwlink/?LinkID=615138',
-    'x64'   => 'http://go.microsoft.com/fwlink/?LinkID=615137',
+    'x86'   => 'http://s3-eu-west-1.amazonaws.com/redgate-puppet/url-rewriter/rewrite_x86.msi',
+    'x64'   => 'http://s3-eu-west-1.amazonaws.com/redgate-puppet/url-rewriter/rewrite_x64.msi',
     default => ''
   }
 
