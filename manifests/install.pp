@@ -11,7 +11,7 @@ class iis_rewrite::install {
 
   validate_string($iis_rewrite::package_source_location)
 
-  $installerpath = "${iis_rewrite::download_destination}\\rewrite_2.0_rtw_${::architecture}.msi"
+  $installerpath = "${iis_rewrite::download_destination}\\rewrite_${::architecture}.msi"
 
   if $caller_module_name != $module_name {
     fail("Use of private class ${name} by ${caller_module_name}")
